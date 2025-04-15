@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0035FA</color>
+    <color name="home">#03A9F4</color>
+    <color name="faculty">#C75E3C</color>
+    <color name="course">#4CAF50</color>
+    <color name="admissions">#C8B93B</color>
+    <color name="social">#853AD0</color>
+    <color name="settings">#D529B5</color>
+    <color name="contact">#5D5C5C</color>
+    <color name="tabs">#5D5C5C</color>
 </resources>

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">UCCMobileApp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admission_requirements">
+    Five (5) CSEC subjects including English and Mathematics
+        (A CSEC pass at level 3 must have been obtained since 1998.)\n\n
+    Candidates with a minimum of 4 CXCs can apply pending outstanding CSEC results
+        (or do UCC replacement courses - Core Mathematics, English for Academic Purpose)
+</string>
+    <string name="about_IT">
+        Degree Type: Bachelor of Science\n
+        Credits: 124\n
+        Next Start Date: May (Summer) 2025\n
+        Awarding Institution: University of the Commonwealth Caribbean\n
+        Delivery Modality: 100% Online &amp; Blended
+    </string>
+
 </resources>
