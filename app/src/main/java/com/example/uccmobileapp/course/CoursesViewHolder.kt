@@ -1,8 +1,9 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.course
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uccmobileapp.R
 
 class CoursesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val codeTextView: TextView = itemView.findViewById(R.id.courseCodeTextView)
@@ -13,8 +14,8 @@ class CoursesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(course: Course) {
 
-            codeTextView.text = course.code ?: "N/A"
-            nameTextView.text = course.title ?: "Untitled Course"
+            codeTextView.text = course.code
+            nameTextView.text = course.title
             creditsTextView.text = "Credits: ${course.credits}"
             val preReq = if (course.preReqs.isNullOrEmpty()) {
                 "None"
@@ -22,6 +23,6 @@ class CoursesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 course.preReqs.joinToString(", ")
             }
             preRequisites.text = "Prerequisites: $preReq"
-            descriptionTextView.text = course.description ?: "No description"
+            descriptionTextView.text = course.description
     }
 }

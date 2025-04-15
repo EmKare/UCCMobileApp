@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.socialmedia
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
+import com.example.uccmobileapp.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -13,7 +14,7 @@ class SocialMediaFragment : Fragment() {
 
     private lateinit var binding : SocialMediaFragment
 
-    private val tabTitles = listOf("Facebook", "Twitter", "Instagram")
+    private val tabTitles = listOf("Facebook", "Twitter", "Instagram", "Tiktok")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

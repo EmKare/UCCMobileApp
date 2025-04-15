@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.socialmedia
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import com.example.uccmobileapp.R
 
 class WebViewFragment : Fragment() {
 

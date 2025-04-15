@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.course
 
 //code, name, credits, pre-requisites, description
 

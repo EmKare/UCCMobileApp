@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context=".AdmissionsFragment">
+    tools:context=".admissions.AdmissionsFragment">
 
     <TextView
         android:id="@+id/admissionsFragTitle"
@@ -80,7 +80,7 @@
         android:paddingBottom="10dp"
         android:textSize="15sp"
         android:text="for Jamaican students"
-        android:textColor="@color/black"/>
+        android:textColor="@color/red"/>
 
     <TextView
         android:id="@+id/admissionsFragRequirements"
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="15sp"
         android:text="for International students"
-        android:textColor="@color/black"/>
+        android:textColor="@color/red"/>
 
     <Button
         android:id="@+id/admissionsFragRequirementsForInternationalButton"
@@ -139,12 +139,12 @@
     <Button
         android:layout_width="160dp"
         android:layout_height="60dp"
-        android:id="@+id/admissionsFragVisitWebsite"
+        android:id="@+id/admissionsFragVisitWebsiteButton"
         android:textSize="20sp"
         android:text="visit UCC"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/admissionsFragApplyOnline"
+        app:layout_constraintEnd_toStartOf="@+id/admissionsFragApplyOnlineButton"
         app:layout_constraintTop_toBottomOf="@+id/admissionsFragNotStudent"
         android:textColor="@color/black"
         android:backgroundTint="@color/white" />
@@ -152,12 +152,12 @@
     <Button
         android:layout_width="160dp"
         android:layout_height="60dp"
-        android:id="@+id/admissionsFragApplyOnline"
+        android:id="@+id/admissionsFragApplyOnlineButton"
         android:textSize="20sp"
         android:text="Apply now"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/admissionsFragVisitWebsite"
+        app:layout_constraintStart_toEndOf="@+id/admissionsFragVisitWebsiteButton"
         app:layout_constraintTop_toBottomOf="@+id/admissionsFragNotStudent"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"/>

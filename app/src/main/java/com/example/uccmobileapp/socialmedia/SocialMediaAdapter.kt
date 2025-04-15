@@ -1,14 +1,16 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.socialmedia
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.uccmobileapp.URLs
 
 class SocialMediaAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     private val urls = listOf(
-        "https://www.facebook.com/uccjamaica",
-        "https://x.com/UCCjamaica?s=09",
-        "https://www.instagram.com/uccjamaica?igsh=cGlka2J3OHA1Ymx5"
+        URLs.UCC_FACEBOOK,
+        URLs.UCC_TWITTER,
+        URLs.UCC_INSTAGRAM,
+        URLs.UCC_TIKTOK
     )
 
     override fun getItemCount() = urls.size

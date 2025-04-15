@@ -1,10 +1,9 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.course
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.uccmobileapp.ITCourses
 
 class CoursesDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -66,7 +65,9 @@ class CoursesDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
                 val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
                 val code = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CODE))
                 val credits = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_CREDITS))
-                val prerequisitesString = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PREREQS))
+                val prerequisitesString = cursor.getString(cursor.getColumnIndexOrThrow(
+                    COLUMN_PREREQS
+                ))
                 val description = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DESCRIPTION))
 
                 val prerequisites = if (prerequisitesString.isNullOrEmpty())

@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.faculty
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

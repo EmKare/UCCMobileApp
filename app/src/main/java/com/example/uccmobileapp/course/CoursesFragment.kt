@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.course
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.uccmobileapp.databinding.FragmentCoursesBinding
-import com.example.uccmobileapp.ITCourses
 
 class CoursesFragment : Fragment() {
 

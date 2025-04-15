@@ -1,10 +1,10 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.course
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uccmobileapp.CoursesViewHolder
+import com.example.uccmobileapp.R
 
 class CoursesAdapter(private val fragment: Fragment, private val courses: List<Course>) : RecyclerView.Adapter<CoursesViewHolder>() {
 

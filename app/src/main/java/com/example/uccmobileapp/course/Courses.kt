@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.course
 
 val ITCourses = listOf(
     Course("ITT101",
