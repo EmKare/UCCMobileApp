@@ -6,10 +6,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uccmobileapp.databinding.FacultyItemBinding
 
-class FacultyMemberAdapter(private val fragment: Fragment, private val facultyMembers: List<FacultyMember>) : RecyclerView.Adapter<FacultyMembersViewHolder>()  {
+class FacultyMembersAdapter(private val fragment: Fragment, private val facultyMembers: List<FacultyMember>) : RecyclerView.Adapter<FacultyMembersViewHolder>()  {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FacultyMembersViewHolder {
-        val binding = FacultyItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = FacultyItemBinding.inflate(LayoutInflater.from(fragment.requireContext()), parent, false)
         return FacultyMembersViewHolder(binding)
     }
 
@@ -18,5 +18,4 @@ class FacultyMemberAdapter(private val fragment: Fragment, private val facultyMe
     }
 
     override fun getItemCount(): Int = facultyMembers.size
-
 }

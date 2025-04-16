@@ -4,11 +4,14 @@ import com.example.uccmobileapp.Title
 
 //name, photo, telephone number, and email of each member.
 
-data class FacultyMember(val title: Title,
-                         val first: String,
-                         val last: String,
-                         val email: String,
-                         val tele: String,
+data class FacultyMember(
+    val title: Title,
+    val first: String,
+    val last: String,
+    val email: String,
+    val tele: String,
+    val role: String,
+    val about: String,
                          //val photo: ByteArray
 )
 /*

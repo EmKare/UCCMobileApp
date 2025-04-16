@@ -18,4 +18,5 @@ class SocialMediaAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
         return WebViewFragment.newInstance(urls[position])
     }
+
 }

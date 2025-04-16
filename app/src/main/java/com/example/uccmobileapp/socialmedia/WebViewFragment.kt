@@ -32,8 +32,10 @@ class WebViewFragment : Fragment() {
         val webView = view.findViewById<WebView>(R.id.webView)
         val url = arguments?.getString(ARG_URL) ?: return //"https://ucc.edu.jm"
 
-        webView.settings.javaScriptEnabled = true
+        true.also { webView.settings.javaScriptEnabled }
         webView.webViewClient = WebViewClient()
         webView.loadUrl(url)
     }
+
+
 }

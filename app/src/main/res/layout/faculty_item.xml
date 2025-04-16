@@ -1,77 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_height="match_parent"
     app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
-
+        android:layout_margin="5dp">
 
         <ImageView
-            android:id="@+id/memberImage"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_margin="5dp"
+            android:id="@+id/facultyMemberImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/facultyMemberFullName"
             android:contentDescription="image of faculty members"/>
 
-        <TextView
-            android:id="@+id/memberTitle"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            android:text="Mr."
-            android:textColor="@color/tabs"
-            android:textSize="23sp"
-            app:layout_constraintStart_toEndOf="@+id/memberImage"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/memberFirstName"
-            tools:layout_editor_absoluteY="22dp" />
 
         <TextView
-            android:id="@+id/memberFirstName"
-            android:layout_width="230dp"
+            android:id="@+id/facultyMemberFullName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            android:text="Michalangelo"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/memberImage"
-            app:layout_constraintTop_toBottomOf="@+id/memberTitle"
+            android:layout_marginTop="25dp"
+            android:text="Mr. Kareem Saunders"
+            android:gravity="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="#8E8C8C"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facultyMemberImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/memberLastName"
-            tools:layout_editor_absoluteY="22dp" />
+            app:layout_constraintBottom_toTopOf="@id/facultyMemberRoleTextView"/>
 
         <TextView
-            android:id="@+id/memberLastName"
-            android:layout_width="230dp"
+            android:id="@+id/facultyMemberRoleTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            android:text="Michalangelo"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/memberImage"
-            app:layout_constraintTop_toBottomOf="@+id/memberFirstName"
+            android:layout_marginBottom="30dp"
+            android:text="Head Of Department"
+            android:gravity="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facultyMemberFullName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/facultyMemberAbout"/>
+
+        <TextView
+            android:id="@+id/facultyMemberAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text=""
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facultyMemberRoleTextView"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/facultyCallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="100dp"
+            android:text="call"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteY="22dp" />
+            app:layout_constraintEnd_toStartOf="@id/facultyEmailButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/facultyEmailButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="100dp"
+            android:text="email"
+            app:layout_constraintStart_toEndOf="@+id/facultyCallButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

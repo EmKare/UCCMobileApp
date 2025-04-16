@@ -12,3 +12,9 @@ Final project
 16.4.25
 - packaged items
 - error with making call/sending email (will fix when I wake)
+
+17.4.25
+- made major changes to files and layouts
+- created a 2nd database (too lazy to fix the database helper)
+- computer froze, so I'm calling it a night
+- fixed an enum bug (Ms and Miss)

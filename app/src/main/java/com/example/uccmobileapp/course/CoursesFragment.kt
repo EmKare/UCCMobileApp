@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.viewpager2.widget.ViewPager2
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uccmobileapp.databinding.FragmentCoursesBinding
 
-class CoursesFragment : Fragment() {
+class CoursesFragment(private val courses : List<Course>) : Fragment() {
 
     private var _binding: FragmentCoursesBinding? = null
     private val binding get() = _binding!!
@@ -26,16 +27,12 @@ class CoursesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
 
-        //binding.coursesViewPager.adapter = CoursesAdapter(this, ITCourses)
-        courseAdapter = CoursesAdapter(this, ITCourses)
+        courseAdapter = CoursesAdapter(this, courses)
 
-        binding.coursesViewPager.apply {
+        binding.coursesRecyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
             adapter = courseAdapter
-            orientation = ViewPager2.ORIENTATION_HORIZONTAL
-            // Add page margin for better spacing
-            setPageTransformer { page, position ->
-                page.translationX = position * -1
-            }
+            addItemDecoration(DividerItemDecoration(binding.root.context, DividerItemDecoration.VERTICAL))
         }
     }
 

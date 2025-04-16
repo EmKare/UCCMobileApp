@@ -1,55 +1,33 @@
 package com.example.uccmobileapp.faculty
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
-import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uccmobileapp.databinding.DialogMemberDetailBinding
 import com.example.uccmobileapp.databinding.FacultyItemBinding
 
 class FacultyMembersViewHolder (private val binding: FacultyItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(facultyMember: FacultyMember) {
-        binding.memberTitle.text = facultyMember.title.toString()
-        binding.memberFirstName.text = facultyMember.first
-        binding.memberLastName.text = facultyMember.last
-
-        binding.root.setOnClickListener { showDetailDialog(facultyMember) }
-    }
-
-    private fun showDetailDialog(facultyMember: FacultyMember) {
-        val dialogBinding = DialogMemberDetailBinding.inflate(LayoutInflater.from(binding.root.context))
-            val dialog = AlertDialog.Builder(binding.root.context)
-            .setView(dialogBinding.root)
-            .create()
-
-        with(dialogBinding) {
-            "${facultyMember.title} ${facultyMember.first} ${facultyMember.last}".also { detailName.text = it }
-
-            btnClose.setOnClickListener { dialog.dismiss() }
-            btnCall.setOnClickListener { dialPhoneNumber(facultyMember.tele) }
-            btnEmail.setOnClickListener { sendEmail(facultyMember.email) }
-        }
-
-        dialog.show()
+        "${facultyMember.title}. ${facultyMember.first} ${facultyMember.last}".also { binding.facultyMemberFullName.text = it }
+        binding.facultyMemberRoleTextView.text = facultyMember.role
+        binding.facultyMemberAbout.text = facultyMember.about
+        binding.facultyCallButton.setOnClickListener { dialPhoneNumber(facultyMember.tele) }
+        binding.facultyEmailButton.setOnClickListener { sendEmail(facultyMember.email) }
     }
 
     private fun dialPhoneNumber(phoneNumber: String) {
         val intent = Intent(Intent.ACTION_DIAL).apply {
             data = Uri.parse("tel:$phoneNumber")
         }
-        if (intent.resolveActivity(binding.root.context.packageManager) != null) {
-            binding.root.context.startActivity(intent)
-        }
+        val context = binding.root.context
+        context.startActivity(Intent.createChooser(intent, "Calling"))
     }
 
     private fun sendEmail(emailAddress: String) {
         val intent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:$emailAddress")
         }
-        if (intent.resolveActivity(binding.root.context.packageManager) != null) {
-            binding.root.context.startActivity(intent)
-        }
+        val context = binding.root.context
+        context.startActivity(Intent.createChooser(intent, "Send Email"))
     }
 }

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/white"
     android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -14,7 +13,7 @@
         app:counterMaxLength="100">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/hodFragmentYourEmail"
+            android:id="@+id/composeDialogYourEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Your Email Address"
@@ -23,10 +22,9 @@
 
 
     <TextView
-        android:id="@+id/hodFragmentHODEmail"
+        android:id="@+id/composeDialogRecipientEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="email@email.com"
         android:layout_marginTop="8dp"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 
@@ -36,7 +34,7 @@
         android:layout_marginTop="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/hodFragmentSubject"
+            android:id="@+id/composeDialogSubject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Subject"
@@ -49,7 +47,7 @@
         android:layout_marginTop="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/hodFragmentMessage"
+            android:id="@+id/composeDialogMessage"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:gravity="top"
@@ -58,7 +56,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/hodFragmentSendEmailButton"
+        android:id="@+id/composeDialogSendEmailButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
