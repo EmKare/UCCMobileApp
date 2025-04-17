@@ -3,9 +3,8 @@ package com.example.uccmobileapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.uccmobileapp.admissions.AdmissionsFragment
 import com.example.uccmobileapp.course.CoursesDatabaseHelper
@@ -16,16 +15,10 @@ import com.example.uccmobileapp.faculty.FacultyFragment
 import com.example.uccmobileapp.faculty.FacultyMembers
 import com.example.uccmobileapp.faculty.FacultyMembersDatabaseHelper
 import com.example.uccmobileapp.socialmedia.SocialMediaFragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() ,FabVisibilityListener {
 
     private lateinit var binding : ActivityMainBinding
-    private lateinit var drawerLayout : DrawerLayout
-    private lateinit var menuButton : ImageButton
-    private lateinit var navigationView : NavigationView
-    private lateinit var emailFAB : FloatingActionButton
 
     private lateinit var coursesDBHelper : CoursesDatabaseHelper
     private lateinit var facultyDBHelper : FacultyMembersDatabaseHelper
@@ -35,6 +28,10 @@ class MainActivity : AppCompatActivity() ,FabVisibilityListener {
         //enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val versionText = findViewById<TextView>(R.id.appVersion)
+        val versionName = packageManager.getPackageInfo(packageName, 0).versionName
+        versionText.text = "Version $versionName"
 
         coursesDBHelper = CoursesDatabaseHelper(binding.root.context)
 
@@ -56,65 +53,60 @@ class MainActivity : AppCompatActivity() ,FabVisibilityListener {
 
         val facultyMembers = facultyDBHelper.getAllFacultyMembers()
 
-        drawerLayout = binding.drawerLayout
-        menuButton = binding.menuButton
-        navigationView = binding.navigationView
-        emailFAB = binding.emailFab
-
-        menuButton.setOnClickListener {
-            drawerLayout.open()
+        binding.menuButton.setOnClickListener {
+            binding.drawerLayout.open()
         }
 
-        emailFAB.setOnClickListener{
-            drawerLayout.close()
+        binding.emailFab.setOnClickListener{
+            binding.drawerLayout.close()
             sendEmailToHOD()
             //goToFragment(EmailFragment())
             //EmailHelper.sendEmail(this, "hod@ucc.edu", "Inquiry from App", "Hello, I’d like to ask about...",)
         }
 
-        navigationView.setNavigationItemSelectedListener {
+        binding.navigationView.setNavigationItemSelectedListener {
             when ( it.itemId )
             {
                 R.id.nav_home ->
                 {
                     showFab()
                     goToFragment(HomeFragment())
-                    drawerLayout.close()
+                    binding.drawerLayout.close()
                     true
                 }
                 R.id.nav_directory ->
                 {
                     hideFab()
+                    binding.drawerLayout.close()
                     goToFragment(FacultyFragment(facultyMembers))
-                    drawerLayout.close()
                     true
                 }
                 R.id.nav_courses ->
                 {
                     showFab()
                     goToFragment(CoursesFragment(courses))
-                    drawerLayout.close()
+                    binding.drawerLayout.close()
                     true
                 }
                 R.id.nav_admissions ->
                 {
                     showFab()
                     goToFragment(AdmissionsFragment())
-                    drawerLayout.close()
+                    binding.drawerLayout.close()
                     true
                 }
                 R.id.nav_social ->
                 {
                     hideFab()
                     goToFragment(SocialMediaFragment())
-                    drawerLayout.close()
+                    binding.drawerLayout.close()
                     true
                 }
                 R.id.nav_settings ->
                 {
                     showFab()
                     goToFragment(SettingsFragment())
-                    drawerLayout.close()
+                    binding.drawerLayout.close()
                     true
                 }
                 else -> false
@@ -124,10 +116,17 @@ class MainActivity : AppCompatActivity() ,FabVisibilityListener {
             goToFragment(HomeFragment())
             binding.navigationView.setCheckedItem(R.id.nav_home)
         }
+
+        //layoutInflater.inflate(R.layout.nav_footer, binding.navigationView, true)
+        //binding.navigationView.addView(footerView)
+
+
+
+
     }
 
     private fun goToFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment).addToBackStack(null).commit()
     }
 
     private fun sendEmailToHOD() {

@@ -10,9 +10,9 @@ android:orientation="vertical">
     android:id="@+id/tabLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:tabIndicatorColor="@color/tabs"
-    app:tabSelectedTextColor="@color/black"
-    app:tabTextColor="@color/blue" />
+    app:tabIndicatorColor="@android:color/transparent"
+    app:tabSelectedTextColor="@android:color/transparent"
+    app:tabTextColor="@android:color/transparent" />
 
 <androidx.viewpager2.widget.ViewPager2
     android:id="@+id/viewPager"

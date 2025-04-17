@@ -1,6 +1,5 @@
 package com.example.uccmobileapp.admissions
 
-import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -26,6 +25,7 @@ class AdmissionsFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -40,6 +40,11 @@ class AdmissionsFragment : Fragment() {
         binding.admissionsFragApplyOnlineButton.setOnClickListener {
             openWebPage(URLs.APPLY_ONLINE)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun openWebPage(url: String) {

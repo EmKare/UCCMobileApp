@@ -18,3 +18,9 @@ Final project
 - created a 2nd database (too lazy to fix the database helper)
 - computer froze, so I'm calling it a night
 - fixed an enum bug (Ms and Miss)
+
+18.4.25
+- started designing
+- had a 10 hr bug "a question sign"
+- 2 screens to go; home and settings
+- might not do a loading screen. I'm exhausted

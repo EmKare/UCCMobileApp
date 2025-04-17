@@ -20,13 +20,14 @@ object URLs {
 
     //UCC Facebook
     const val UCC_FACEBOOK =
-        "https://www.facebook.com/uccjamaica"
+        "https://m.facebook.com/uccjamaica/"
 
     //UCCInstagram
     const val UCC_INSTAGRAM =
-        "https://www.instagram.com/uccjamaica?igsh=cGlka2J3OHA1Ymx5"
+        //"Instagram 375.0.0.38.66 Android"
+        "https://m.instagram.com/uccjamaica?igsh=cGlka2J3OHA1Ymx5"
 
     //UCC Twitter
     const val UCC_TWITTER =
-        ""
+        "https://m.x.com/UCCjamaica?s=09"
 }

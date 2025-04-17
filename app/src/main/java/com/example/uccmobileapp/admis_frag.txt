@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".admissions.AdmissionsFragment">
+
+    <TextView
+        android:id="@+id/admissionsFragTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:paddingTop="25dp"
+        android:paddingBottom="5dp"
+        android:text="Admissions"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/admissionsFragHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/admissionsFragHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/admissionsFragAboutIT"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="30sp"
+        android:text="Information Technology"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/admissionsFragAboutIT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/admissionsFragRequirementsHeader1"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        android:text="@string/about_IT"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/admissionsFragRequirementsHeader1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragAboutIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/admissionsFragRequirementsForJamaicans"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:textSize="30sp"
+        android:text="Requirements"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/admissionsFragRequirementsForJamaicans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragRequirementsHeader1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/admissionsFragRequirements"
+        android:paddingBottom="10dp"
+        android:textSize="15sp"
+        android:text="for Jamaican students"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:id="@+id/admissionsFragRequirements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragRequirementsForJamaicans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/admissionsFragRequirementsForInternational"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:text="@string/admission_requirements"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/admissionsFragRequirementsForInternational"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragRequirements"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
+        android:text="for International students"
+        android:textColor="@color/red"/>
+
+    <Button
+        android:id="@+id/admissionsFragRequirementsForInternationalButton"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragRequirementsForInternational"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="click here"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/admissionsFragNotStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragRequirementsForInternationalButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:text="Join our amazing institution!"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/admissionsFragVisitWebsiteButton"
+        android:textSize="20sp"
+        android:text="visit UCC"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/admissionsFragApplyOnlineButton"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragNotStudent"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/admissionsFragApplyOnlineButton"
+        android:textSize="20sp"
+        android:text="Apply now"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/admissionsFragVisitWebsiteButton"
+        app:layout_constraintTop_toBottomOf="@+id/admissionsFragNotStudent"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
