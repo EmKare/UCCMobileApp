@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
-     tools:openDrawer="start" >
+    tools:openDrawer="start">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,6 +30,7 @@
                 android:layout_height="48dp"
                 android:background="@android:color/transparent"
                 android:padding="5dp"
+                android:contentDescription="Open Menu"
                 android:src="@drawable/menu_icon" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -84,5 +85,4 @@
 
         <include layout="@layout/nav_footer"/>
     </LinearLayout>
-
 </androidx.drawerlayout.widget.DrawerLayout>

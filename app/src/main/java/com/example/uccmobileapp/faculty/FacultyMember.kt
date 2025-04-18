@@ -1,6 +1,6 @@
 package com.example.uccmobileapp.faculty
 
-import com.example.uccmobileapp.Title
+import com.example.uccmobileapp.misc.Title
 
 //name, photo, telephone number, and email of each member.
 
@@ -12,7 +12,7 @@ data class FacultyMember(
     val tele: String,
     val role: String,
     val about: String,
-                         //val photo: ByteArray
+    //val photo: String
 )
 /*
 {

@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    android:padding="16dp">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text= "Settings"
-        android:textSize="36sp"
-        android:gravity="center"
-        android:background="@color/black"
-        android:textColor="@color/white"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:showDividers="middle"
+        android:dividerPadding="8dp">
 
-</FrameLayout>
+        <!-- Dark Mode Toggle -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/darkModeSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
+        <!-- Open Website -->
+        <Button
+            android:id="@+id/openWebsiteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visit UCC Website"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:drawablePadding="8dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp" />
+
+        <!-- View Map -->
+        <Button
+            android:id="@+id/viewMapBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Campus on Map"
+            android:drawableStart="@android:drawable/ic_menu_mapmode"
+            android:drawablePadding="8dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp" />
+
+        <!-- About -->
+        <Button
+            android:id="@+id/aboutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About This App"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</ScrollView>

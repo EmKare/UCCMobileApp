@@ -28,6 +28,7 @@
             android:backgroundTint="#CACACA">
 
             <ImageView
+                android:id="@+id/facultyImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="image of faculty members"

@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uccmobileapp.databinding.CourseItemBinding
+import com.example.uccmobileapp.databinding.CourseItem1Binding
 
 class CoursesAdapter(private val fragment: Fragment, private val courses: List<Course>) : RecyclerView.Adapter<CoursesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesViewHolder {
-        val binding = CourseItemBinding.inflate(LayoutInflater.from(fragment.requireContext()), parent, false)
+        val binding = CourseItem1Binding.inflate(LayoutInflater.from(fragment.requireContext()), parent, false)
         return CoursesViewHolder(binding)
     }
 

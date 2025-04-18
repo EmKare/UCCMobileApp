@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.uccmobileapp.URLs
+import com.example.uccmobileapp.misc.URLs
 import com.example.uccmobileapp.databinding.FragmentAdmissionsBinding
 
 
@@ -34,7 +34,7 @@ class AdmissionsFragment : Fragment() {
         }
 
         binding.admissionsFragVisitWebsiteButton.setOnClickListener {
-            openWebPage(URLs.VISIT_WEBSITE)
+            openWebPage(URLs.VISIT_ADMISSIONS)
         }
 
         binding.admissionsFragApplyOnlineButton.setOnClickListener {

@@ -296,7 +296,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:textSize="17sp"
-                        android:text="@string/visit_website"
+                        android:text="@string/visit_page"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
 

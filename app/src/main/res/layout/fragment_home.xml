@@ -1,17 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:background="@android:color/white">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text= "Home"
-        android:textSize="36sp"
-        android:gravity="center"
-        android:background="@color/home"
-        android:textColor="@color/white"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-</FrameLayout>
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/homeUCCLogo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ucc_logo"
+            android:contentDescription="University Logo" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/homeUCCNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="University of the Commonwealth Caribbean (UCC)"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Motto -->
+        <TextView
+            android:id="@+id/homeUCCMotto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“A Tradition of Excellence.”"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Swipeable image gallery -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Us on the Map"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/homeUCCMappreview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/map_preview"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image_bg"
+            android:contentDescription="Map preview"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:outlineProvider="background" />
+
+
+        <Button
+            android:id="@+id/homeUCCVisitWebsiteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visit Our Website"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:drawablePadding="8dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

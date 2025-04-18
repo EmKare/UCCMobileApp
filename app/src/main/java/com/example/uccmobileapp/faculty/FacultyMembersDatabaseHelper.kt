@@ -4,7 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.uccmobileapp.Title
+import com.example.uccmobileapp.misc.Title
 
 class FacultyMembersDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
@@ -22,7 +22,6 @@ class FacultyMembersDatabaseHelper(context: Context) : SQLiteOpenHelper(context,
         private const val COLUMN_TELE = "tele"
         private const val COLUMN_ROLE = "role"
         private const val COLUMN_ABOUT = "about"
-        //private const val COLUMN_PHOTO = "photo"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {

@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.misc
 
 object URLs {
 
@@ -6,8 +6,13 @@ object URLs {
     const val REQUIREMENTS_INTERNATIONAL =
         "https://www.ucc.edu.jm/programmes/undergraduate/requirements-for-international-students"
 
+
+    //International Requirements
+    const val UCC_HOMEPAGE =
+    "https://ucc.edu.jm"
+
     //Main Admissions Page
-    const val VISIT_WEBSITE =
+    const val VISIT_ADMISSIONS =
         "https://www.ucc.edu.jm/admissions"
 
     //Online Application

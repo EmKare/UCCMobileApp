@@ -1,6 +1,6 @@
 package com.example.uccmobileapp.faculty
 
-import com.example.uccmobileapp.Title
+import com.example.uccmobileapp.misc.Title
 
 val FacultyMembers = listOf(
     FacultyMember(
@@ -83,7 +83,7 @@ val FacultyMembers = listOf(
     FacultyMember(
         title = Title.DR,
         first = "Theodore",
-        last = "Robinson",
+        last = "Kosta",
         email = "trobinson@faculty.ucc.edu.jm",
         tele = "+1 876-555-0108",
         role = "Cloud Computing Architect",

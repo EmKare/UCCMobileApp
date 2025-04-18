@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- University Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/ivUniversityLogo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ucc_logo"
+                android:contentDescription="university logo"/>
+
+            <TextView
+                android:id="@+id/tvUniversityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/university_name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"/>
+
+            <TextView
+                android:id="@+id/tvUniversityMotto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Fostering Leadership &amp; Innovation"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+        </LinearLayout>
+
+        <!-- Image Gallery -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerGallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpenMap"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="open map"
+                app:icon="@drawable/globe_line"
+                app:iconPadding="8dp"
+                app:iconTint="?attr/colorPrimary"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVisitWebsite"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="@string/visit_website"
+                app:icon="@drawable/globe_line"
+                app:iconPadding="8dp"
+                app:iconTint="?attr/colorPrimary"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

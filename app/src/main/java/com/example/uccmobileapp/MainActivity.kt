@@ -14,6 +14,8 @@ import com.example.uccmobileapp.databinding.ActivityMainBinding
 import com.example.uccmobileapp.faculty.FacultyFragment
 import com.example.uccmobileapp.faculty.FacultyMembers
 import com.example.uccmobileapp.faculty.FacultyMembersDatabaseHelper
+import com.example.uccmobileapp.home.HomeFragment
+import com.example.uccmobileapp.settings.SettingsFragment
 import com.example.uccmobileapp.socialmedia.SocialMediaFragment
 
 class MainActivity : AppCompatActivity() ,FabVisibilityListener {

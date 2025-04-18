@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/facultyCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#DDDDDD"
+    app:cardBackgroundColor="@android:color/white"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.MediumComponent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/facultyMemberImage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="90dp"
+            app:cardElevation="0dp"
+            android:layout_margin="40dp"
+            android:backgroundTint="#CACACA">
+
+            <!-- Headshot -->
+            <ImageView
+                android:id="@+id/facultyImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_bg"
+                android:src="@drawable/round_person_24"
+                android:contentDescription="image of faculty members" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/facultyMemberFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Dr. Karen Smith"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Role -->
+        <TextView
+            android:id="@+id/facultyMemberRoleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dean of IT"
+            android:textSize="24sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="30dp" />
+
+        <!-- About Me -->
+        <TextView
+            android:id="@+id/facultyMemberAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/admission_requirements"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"/>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/facultyCallButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#009688"
+                android:drawableStart="@android:drawable/ic_menu_call"
+                android:drawablePadding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/facultyEmailButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#673AB7"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawablePadding="8dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,4 +1,4 @@
-package com.example.uccmobileapp
+package com.example.uccmobileapp.misc
 
 enum class Title(private val displayName: String) {
     MR("Mr"),

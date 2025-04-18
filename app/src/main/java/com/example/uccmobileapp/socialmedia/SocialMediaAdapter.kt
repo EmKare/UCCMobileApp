@@ -2,7 +2,7 @@ package com.example.uccmobileapp.socialmedia
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.uccmobileapp.URLs
+import com.example.uccmobileapp.misc.URLs
 
 class SocialMediaAdapter (fragment: Fragment) : FragmentStateAdapter(fragment) {
 

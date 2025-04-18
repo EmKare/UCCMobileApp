@@ -24,3 +24,7 @@ Final project
 - had a 10 hr bug "a question sign"
 - 2 screens to go; home and settings
 - might not do a loading screen. I'm exhausted
+
+19.4.25
+- app is 95% complete
+- only error now really is 'dark mode'
