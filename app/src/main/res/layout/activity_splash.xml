@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/splashRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
     android:gravity="center">
 
+
     <ImageView
         android:id="@+id/splashLogo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ucc_logo"
         android:contentDescription="@string/university_logo_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/splashTitle"
+        android:layout_marginTop="150dp"
         android:scaleType="centerInside"
         android:alpha="0.0"
         android:scaleX="0.8"
         android:scaleY="0.8"/>
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/splashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splashLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:textSize="45sp"
+        android:textColor="@color/splash_text"
+        android:alpha="0.0"
+        android:scaleX="0.8"
+        android:scaleY="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

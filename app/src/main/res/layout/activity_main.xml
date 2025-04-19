@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
+    android:background="@color/light_gray_bg"
     ><!-- tools:openDrawer="start"-->
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -66,7 +66,7 @@
     <string name="social_media">Social Media</string>
     <string name="settings">Settings</string>
     <string name="welcomes_you">Welcomes You!</string>
-    <string name="about_us">About Ucc</string>
+    <string name="about_us">About UCC</string>
     <string name="about_ucc">About University of the Commonwealth Caribbean (UCC)</string>
     <string name="about_ucc_info_off_website">
         The University of the Commonwealth Caribbean (UCC), registered as a University by the
@@ -92,5 +92,6 @@
         Master’s degree programs from the Commonwealth of Learning.\n
     </string>
     <string name="barcode_ucc">Barcode for UCC</string>
+    <string name="name_of_app">CampusPulse©</string>
 
 </resources>

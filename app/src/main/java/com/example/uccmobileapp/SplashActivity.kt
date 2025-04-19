@@ -25,6 +25,13 @@ class SplashActivity : AppCompatActivity() {
             .setDuration(800)
             .start()
 
+        binding.splashTitle.animate()
+            .alpha(1f)
+            .scaleX(1f)
+            .scaleY(1f)
+            .setDuration(800)
+            .start()
+
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
