@@ -6,8 +6,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.uccmobileapp.R
 
-class ImagePreviewDialog(private val images: List<Int>, private val startPosition: Int
-) : DialogFragment() {
+class ImagePreviewDialog(private val images: List<Int>, private val startPosition: Int) : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = Dialog(requireContext(), android.R.style.Theme_Black_NoTitleBar_Fullscreen)
@@ -28,7 +27,7 @@ class ImagePreviewDialog(private val images: List<Int>, private val startPositio
     override fun onStart() {
         super.onStart()
         dialog?.window?.apply {
-            setWindowAnimations(android.R.style.Animation_Dialog) // Or create your own!
+            setWindowAnimations(android.R.style.Animation_Dialog)
         }
     }
 

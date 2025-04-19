@@ -2,6 +2,8 @@ package com.example.uccmobileapp.faculty
 
 import com.example.uccmobileapp.misc.Title
 
+//a top-level val for FacultyMembers objects
+//the member 'role' and 'about' information were AI generated
 val FacultyMembers = listOf(
     FacultyMember(
         title = Title.DR,

@@ -1,11 +1,11 @@
 package com.example.uccmobileapp.misc
 
+//object with all the urls used throughout the project
 object URLs {
 
     //International Requirements
     const val REQUIREMENTS_INTERNATIONAL =
         "https://www.ucc.edu.jm/programmes/undergraduate/requirements-for-international-students"
-
 
     //International Requirements
     const val UCC_HOMEPAGE =
@@ -27,7 +27,7 @@ object URLs {
     const val UCC_FACEBOOK =
         "https://m.facebook.com/uccjamaica/"
 
-    //UCCInstagram
+    //UCC Instagram
     const val UCC_INSTAGRAM =
         //"Instagram 375.0.0.38.66 Android"
         "https://m.instagram.com/uccjamaica?igsh=cGlka2J3OHA1Ymx5"
@@ -35,4 +35,8 @@ object URLs {
     //UCC Twitter
     const val UCC_TWITTER =
         "https://m.x.com/UCCjamaica?s=09"
+
+    //About UCC Youtube video
+    const val ABOUT_UCC_VIDEO =
+    "https://www.youtube.com/embed/r_y2XoQW-Bs?si=bBup2KYPJ38oCDGo"
 }

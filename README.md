@@ -36,3 +36,6 @@ Final project
 - colours need to be sorted thru
 - drawable files needs to be sorted thru
 - need a simple loading screen
+
+20.4.25
+- assignment complete

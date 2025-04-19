@@ -65,5 +65,32 @@
     <string name="admissions">Admissions</string>
     <string name="social_media">Social Media</string>
     <string name="settings">Settings</string>
+    <string name="welcomes_you">Welcomes You!</string>
+    <string name="about_us">About Ucc</string>
+    <string name="about_ucc">About University of the Commonwealth Caribbean (UCC)</string>
+    <string name="about_ucc_info_off_website">
+        The University of the Commonwealth Caribbean (UCC), registered as a University by the
+        University Council of Jamaica, is Jamaica’s largest, fastest-growing, non-affiliated
+        private institution of higher education, and is now one of six higher education entities with the
+        accolade of institutional accreditation from the University Council of Jamaica.
+        UCC is also institutionally accredited internationally by the UK-based Accreditation Service for
+        International Colleges and Universities, and is registered by the Jamaica Tertiary Education Commission,
+        JTEC, the official GOJ regulatory body, as a Teaching University.\n\n
+        UCC is headquartered in Kingston, Jamaica, with five physical campuses and UCC Online.
+        UCC was formed in 2004, as a result of a merger in 2002 of the Institute of Management
+        Sciences, which was incorporated in 1992, and the Institute of Management and Production,
+        which was incorporated in 1976.\n\n
+        UCC offers a range of disciplines, from the professional certificate to the graduate levels.
+        The institution currently has approximately 7,000 students, and some 400 faculty and staff members,
+        including part-time and full-time academic staff. Throughout its history, UCC has been characterized by
+        dynamic entrepreneurialism and international university partnerships. These partnerships include the
+        University of London – UCC is the only local high education institution to be recognized as an
+        affiliate University of London institution, for the purpose of providing support to Jamaican students
+        enrolled in the Certificate of Higher Education in Common Law, and the Bachelor of Laws degree program.\n\n
+        The University of the Commonwealth Caribbean also partnered with Florida International University since the
+        beginning of the 21st Century, in offering various degree programs, andhas licensed the CEMBA and the CEMPA
+        Master’s degree programs from the Commonwealth of Learning.\n
+    </string>
+    <string name="barcode_ucc">Barcode for UCC</string>
 
 </resources>

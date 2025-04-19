@@ -1,5 +1,7 @@
 package com.example.uccmobileapp.course
 
+//a top-level val with information about each course
+//'description' was taken from an old UCC 'IT program' file
 val ITCourses = listOf(
     Course("ITT101",
         "Computer and Information Systems",

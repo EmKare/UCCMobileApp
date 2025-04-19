@@ -23,15 +23,12 @@ class CoursesViewHolder(private val binding: CourseItem1Binding) : RecyclerView.
             imageID2 = binding.root.context.resources.getIdentifier("general_course_icon2", "drawable", binding.root.context.packageName)
         }
         binding.courseImage.setImageResource(imageID)
-
         binding.root.setOnClickListener { showDetailDialog(course, imageID, imageID2) }
     }
 
     private fun showDetailDialog(course: Course, imageID: Int, imageID2: Int) {
         val dialogBinding = DialogCourseDetail2Binding.inflate(LayoutInflater.from(binding.root.context))
-        val dialog = AlertDialog.Builder(binding.root.context)
-            .setView(dialogBinding.root)
-            .create()
+        val dialog = AlertDialog.Builder(binding.root.context).setView(dialogBinding.root).create()
 
         with(dialogBinding) {
 

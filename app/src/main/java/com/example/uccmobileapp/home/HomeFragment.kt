@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
             override fun run() {
                 val nextItem = (binding.imageSlider.currentItem + 1) % imageList.size
                 binding.imageSlider.setCurrentItem(nextItem, true)
-                handler.postDelayed(this, 4000) // every 4 seconds
+                handler.postDelayed(this, 4000)
             }
         }
         handler.postDelayed(runnable, 4000)

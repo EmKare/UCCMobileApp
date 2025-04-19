@@ -16,10 +16,7 @@ class CoursesFragment(private val courses : List<Course>) : Fragment() {
 
     private lateinit var courseAdapter: CoursesAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentCoursesBinding.inflate(inflater, container, false)
         return binding.root
     }

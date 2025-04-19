@@ -1,5 +1,7 @@
 package com.example.uccmobileapp.misc
 
+//enum class of Titles
+//used for FacultyMember objects
 enum class Title(private val displayName: String) {
     MR("Mr"),
     MISS("Miss"),

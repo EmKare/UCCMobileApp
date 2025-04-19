@@ -31,8 +31,6 @@ class CoursesDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
             $COLUMN_PREREQS TEXT, 
             $COLUMN_DESCRIPTION TEXT)"""
         db?.execSQL(createTableQuery)
-
-        //insertCourses()
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -55,26 +53,11 @@ class CoursesDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABA
             put(COLUMN_CODE, course.code)
             put(COLUMN_TITLE, course.title)
             put(COLUMN_CREDITS, course.credits)
-            put(COLUMN_PREREQS, course.preReqs.joinToString(","))  // stored as comma-separated string
+            put(COLUMN_PREREQS, course.preReqs.joinToString(","))
             put(COLUMN_DESCRIPTION, course.description)
         }
         return db.insert(TABLE_NAME, null, values)
     }
-/*
-    private fun insertCourses(){
-        val db = writableDatabase
-        ITCourses.forEach { course ->
-            val values = ContentValues().apply {
-                put(COLUMN_TITLE, course.title)
-                put(COLUMN_CODE, course.code)
-                put(COLUMN_CREDITS, course.credits)
-                put(COLUMN_PREREQS, course.preReqs.joinToString(","))
-                put(COLUMN_DESCRIPTION, course.description)
-            }
-            db.insert(TABLE_NAME, null, values)
-        }
-        db?.close()
-    }*/
 
     fun getAllCourses(): List<Course> {
         val courses = mutableListOf<Course>()

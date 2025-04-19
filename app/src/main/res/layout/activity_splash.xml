@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ucc_logo"
+        android:contentDescription="@string/university_logo_desc"
+        android:scaleType="centerInside"
+        android:alpha="0.0"
+        android:scaleX="0.8"
+        android:scaleY="0.8"/>
+</FrameLayout>

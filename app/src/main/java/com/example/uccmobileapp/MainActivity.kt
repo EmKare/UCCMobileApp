@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.uccmobileapp.about.AboutUccFragment
 import com.example.uccmobileapp.admissions.AdmissionsFragment
 import com.example.uccmobileapp.course.CoursesDatabaseHelper
 import com.example.uccmobileapp.course.CoursesFragment
@@ -108,6 +109,13 @@ class MainActivity : AppCompatActivity() ,FabVisibilityListener {
                 {
                     showFab()
                     goToFragment(SettingsFragment())
+                    binding.drawerLayout.close()
+                    true
+                }
+                R.id.nav_about_ucc ->
+                {
+                    showFab()
+                    goToFragment(AboutUccFragment())
                     binding.drawerLayout.close()
                     true
                 }

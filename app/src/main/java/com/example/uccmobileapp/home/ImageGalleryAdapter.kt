@@ -9,7 +9,7 @@ import com.example.uccmobileapp.databinding.ImageItemBinding
 class ImageGalleryAdapter(private val imageList: List<Int> ) : RecyclerView.Adapter<ImageGalleryAdapter.ImageViewHolder>() {
 
     inner class ImageViewHolder(val binding: ImageItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        private var isZoomed = false
+        //private var isZoomed = false
 
         fun bind(imageRes: Int) {
             binding.galleryImageView.setImageResource(imageRes)

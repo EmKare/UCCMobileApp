@@ -1,7 +1,7 @@
 package com.example.uccmobileapp.course
 
+//data class for Course objects
 //code, name, credits, pre-requisites, description
-
 data class Course(val code: String,
                   val title: String,
                   val credits: Int,

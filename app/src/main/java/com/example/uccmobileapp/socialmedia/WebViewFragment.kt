@@ -1,5 +1,6 @@
 package com.example.uccmobileapp.socialmedia
 
+import android.annotation.SuppressLint
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.fragment.app.Fragment
 import com.example.uccmobileapp.R
+
 
 class WebViewFragment : Fragment() {
 
@@ -34,6 +36,7 @@ class WebViewFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_web_view, container, false)
         webView = view.findViewById(R.id.webView)
+        //webView.setWebViewClient(WebViewClient())
         progressBar = view.findViewById(R.id.progressBar)
         refreshButton = view.findViewById(R.id.btnRefresh)
         return view
@@ -48,17 +51,18 @@ class WebViewFragment : Fragment() {
 
         val url = arguments?.getString(ARG_URL) ?: DEFAULT_URL
 
-        configureWebView(url)
         loadUrl(url)
+        configureWebView(url)
     }
 
     private fun loadUrl(url: String) {
-        if (url.contains("instagram.com")) {
+        if (url.contains("instagram")) {
             webView.settings.userAgentString = "Instagram 219.0.0.12.117 Android"
         }
         webView.loadUrl(url)
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private fun configureWebView(url: String) {
         val settings = webView.settings
         settings.apply {
@@ -66,6 +70,7 @@ class WebViewFragment : Fragment() {
             domStorageEnabled = true
             loadWithOverviewMode = true
             useWideViewPort = true
+            loadsImagesAutomatically = true
             cacheMode = WebSettings.LOAD_DEFAULT
             mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
             setSupportZoom(true)
@@ -82,11 +87,7 @@ class WebViewFragment : Fragment() {
                 progressBar.visibility = View.GONE
             }
 
-            override fun onReceivedError(
-                view: WebView?,
-                request: WebResourceRequest?,
-                error: WebResourceError?
-            ) {
+            override fun onReceivedError(view: WebView?, request: WebResourceRequest?, error: WebResourceError?) {
                 if (request?.isForMainFrame == true) {
                     progressBar.visibility = View.GONE
                     Toast.makeText(requireContext(), "Could not load page. Opening in browser...", Toast.LENGTH_SHORT).show()

@@ -5,10 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uccmobileapp.databinding.ImageItemBinding
 
-class FullscreenImageAdapter(
-    private val images: List<Int>,
-    private val onTap: () -> Unit
-) : RecyclerView.Adapter<FullscreenImageAdapter.FullscreenViewHolder>() {
+class FullscreenImageAdapter(private val images: List<Int>, private val onTap: () -> Unit) : RecyclerView.Adapter<FullscreenImageAdapter.FullscreenViewHolder>() {
 
     inner class FullscreenViewHolder(val binding: ImageItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(imageRes: Int) {
