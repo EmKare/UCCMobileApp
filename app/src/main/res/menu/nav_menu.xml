@@ -5,36 +5,36 @@
         <item
             android:icon="@drawable/house_icon"
             android:id="@+id/nav_home"
-            android:title="Home" />
+            android:title="@string/home" />
     </group>
     <group android:id="@+id/group2">
         <item
             android:icon="@drawable/folder_icon"
             android:id="@+id/nav_directory"
-            android:title="Faculty Directory" />
+            android:title="@string/faculty_directory" />
     </group>
     <group android:id="@+id/group3">
         <item
             android:icon="@drawable/education_icon"
             android:id="@+id/nav_courses"
-            android:title="Courses" />
+            android:title="@string/courses" />
     </group>
     <group android:id="@+id/group4">
         <item
             android:icon="@drawable/approved_icon"
             android:id="@+id/nav_admissions"
-            android:title="Admissions" />
+            android:title="@string/admissions" />
         </group>
     <group android:id="@+id/group5">
         <item
             android:icon="@drawable/media_icon"
             android:id="@+id/nav_social"
-            android:title="Social Media" />
+            android:title="@string/social_media" />
     </group>
     <group android:id="@+id/group6">
         <item
             android:icon="@drawable/settings_icon"
             android:id="@+id/nav_settings"
-            android:title="Settings" />
+            android:title="@string/settings" />
     </group>
 </menu>

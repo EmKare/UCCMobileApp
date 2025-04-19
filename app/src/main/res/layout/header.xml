@@ -18,14 +18,15 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/round_person_24"/>
+            android:src="@drawable/round_person_24"
+            android:contentDescription="@string/profile_image"/>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Name"
+        android:text="@string/user_name"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="15sp"
@@ -35,7 +36,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Email"
+        android:text="@string/user_email"
         android:textColor="#323232"
         android:textStyle="bold"
         android:textSize="13sp" />

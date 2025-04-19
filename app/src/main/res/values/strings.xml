@@ -1,13 +1,11 @@
 <resources>
     <string name="app_name">UCCMobileApp</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="admission_requirements">
     Five (5) CSEC subjects including English and Mathematics
         (A CSEC pass at level 3 must have been obtained since 1998.)\n
-    Candidates with a minimum of 4 CXCs can apply pending outstanding CSEC results
+        Candidates with a minimum of 4 CXCs can apply pending outstanding CSEC results
         (or do UCC replacement courses - Core Mathematics, English for Academic Purpose)
-</string>
+    </string>
     <string name="about_IT">
         Degree Type: Bachelor of Science\n
         Credits: 124\n
@@ -18,8 +16,8 @@
     <string name="apply_online">Apply Online</string>
     <string name="apply_now">Apply Now</string>
     <string name="visit_website">Visit our Website</string>
-    <string name="visit_page">Visit our Page</string>
-    <string name="view_internation_students">View Internation Students</string>
+    <string name="visit_page">Admissions Page</string>
+    <string name="view_internation_students">View International Students</string>
     <string name="international_student_requirements">International Student Requirements</string>
     <string name="for_jamaican_students">For Jamaican Students:</string>
     <string name="requirements">Admission Requirements</string>
@@ -27,10 +25,45 @@
     <string name="online_learning">Online Learning</string>
     <string name="may_summer_2025">May (Summer) 2025</string>
     <string name="start_date">Start Date</string>
-    <string name="university_name">University of the Commonwealth Caribbean</string>
     <string name="program_details">Program Details</string>
     <string name="bachelor_of_science_bsc">Bachelor of Science (BSc)</string>
     <string name="programme">Information Technology</string>
     <string name="app_version">App Version 1.0.0</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="arrow_right">Arrow Right</string>
+    <string name="main_user">Main User</string>
+    <string name="view_campus_on_map">View Campus on Map</string>
+    <string name="map_preview">Map preview</string>
+    <string name="ucc_motto">Fostering Leadership and Innovation</string>
+    <string name="university_name">University of the Commonwealth Caribbean (UCC)</string>
+    <string name="university_logo_desc">University Logo</string>
+    <string name="app_dev_team"><![CDATA[Kareem Saunders & Ramone Cunningham]]></string>
+    <string name="course_icon">Course Icon</string>
+    <string name="close">Close</string>
+    <string name="prerequisites_header">Prerequisites:</string>
+    <string name="divider">|</string>
+    <string name="fab_desc">Email HOD</string>
+    <string name="open_menu">Open Menu</string>
+    <string name="image_of_faculty_members">image of faculty members</string>
+    <string name="call">Dial</string>
+    <string name="email">Email</string>
+    <string name="your_email">your email address</string>
+    <string name="subject">Subject:</string>
+    <string name="your_message">your message</string>
+    <string name="send_email">Send Email</string>
+    <string name="scroll_left">Scroll Left</string>
+    <string name="scroll_right">Scroll Right</string>
+    <string name="about_this_app">About This App</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="refresh">Refresh</string>
+    <string name="user_name">User Name</string>
+    <string name="user_email">User Email</string>
+    <string name="gallery_image">Gallery Image</string>
+    <string name="home">Home</string>
+    <string name="faculty_directory">Faculty Directory</string>
+    <string name="courses">Courses</string>
+    <string name="admissions">Admissions</string>
+    <string name="social_media">Social Media</string>
+    <string name="settings">Settings</string>
 
 </resources>

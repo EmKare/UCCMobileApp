@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.uccmobileapp.R
 import com.example.uccmobileapp.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -15,10 +16,7 @@ class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -58,7 +56,8 @@ class SettingsFragment : Fragment() {
         binding.aboutBtn.setOnClickListener {
             val dialog = androidx.appcompat.app.AlertDialog.Builder(requireContext())
                 .setTitle("About This App")
-                .setMessage("UCC Mobile App\nVersion 1.0\nDeveloped with ❤️ by You!")
+                .setMessage("UCC Mobile App\nVersion 1.0\nDeveloped by ${binding.root.context.resources.getString(
+                    R.string.app_dev_team)}")//with ❤️
                 .setPositiveButton("OK", null)
                 .create()
             dialog.show()

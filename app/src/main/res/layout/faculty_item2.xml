@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/facultyCard"
     android:layout_width="match_parent"
@@ -36,7 +37,7 @@
                 android:scaleType="centerCrop"
                 android:background="@drawable/circle_bg"
                 android:src="@drawable/round_person_24"
-                android:contentDescription="image of faculty members" />
+                android:contentDescription="@string/image_of_faculty_members" />
 
         </androidx.cardview.widget.CardView>
 
@@ -46,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Dr. Karen Smith"
+            android:text=""
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
@@ -58,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Dean of IT"
+            android:text=""
             android:textSize="24sp"
             android:textColor="#777777"
             android:layout_marginBottom="30dp" />
@@ -68,7 +69,7 @@
             android:id="@+id/facultyMemberAbout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/admission_requirements"
+            android:text=""
             android:textSize="18sp"
             android:textColor="#444444"
             android:lineSpacingExtra="4dp"
@@ -86,26 +87,30 @@
 
             <Button
                 android:id="@+id/facultyCallButton"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Call"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#009688"
-                android:drawableStart="@android:drawable/ic_menu_call"
+                android:backgroundTint="@color/teal_700"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/baseline_add_ic_call_24"
                 android:drawablePadding="8dp"
+                android:contentDescription="@string/call"
+                android:paddingEnd="27dp"
+                android:paddingStart="1dp"
                 android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/facultyEmailButton"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Email"
+                android:layout_gravity="center"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#673AB7"
-                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:backgroundTint="@color/purple_500"
+                android:drawableEnd="@drawable/baseline_mark_email_read_24"
                 android:drawablePadding="8dp"
+                android:contentDescription="@string/email"
+                android:paddingEnd="27dp"
+                android:paddingStart="1dp"
                 android:layout_marginStart="8dp" />
         </LinearLayout>
 

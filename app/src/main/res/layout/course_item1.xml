@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    android:focusable="true"
     app:cardCornerRadius="20dp"
     app:cardElevation="6dp"
     app:strokeWidth="1dp"
@@ -26,7 +27,7 @@
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             android:layout_gravity=""
-            android:contentDescription="Course Image"
+            android:contentDescription="@string/course_icon"
             android:layout_marginBottom="16dp"
             android:src="@drawable/globe_line" />
 
@@ -35,7 +36,7 @@
             android:id="@+id/courseNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mobile App Development"
+            android:text=""
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
@@ -52,7 +53,7 @@
                 android:id="@+id/courseCodeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="IT401"
+                android:text=""
                 android:textSize="18sp"
                 android:textColor="#666666"/>
 
@@ -60,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="|"
+                android:text="@string/divider"
                 android:textSize="22sp"
                 android:textColor="#666666" />
 
@@ -70,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:text="3 Credits"
+                android:text=""
                 android:textSize="18sp"
                 android:textColor="#666666" />
         </LinearLayout>

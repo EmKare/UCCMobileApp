@@ -28,3 +28,11 @@ Final project
 19.4.25
 - app is 95% complete
 - only error now really is 'dark mode'
+
+19.4.25
+- application is 98% complete
+- dark mode still an issue
+- all string resources have been made
+- colours need to be sorted thru
+- drawable files needs to be sorted thru
+- need a simple loading screen

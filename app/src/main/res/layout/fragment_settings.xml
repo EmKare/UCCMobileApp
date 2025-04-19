@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
@@ -12,21 +15,68 @@
         android:showDividers="middle"
         android:dividerPadding="8dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/profileCircleImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/imageBorderColor"
+                android:src="@drawable/round_person_24"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/profile_image"/>
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/profileCircleImageView"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_user"
+                android:textSize="16sp"
+                android:textColor="#5D5C5C"
+                android:layout_below="@id/usernameTextView"
+                android:layout_toEndOf="@id/profileCircleImageView"/>
+
+            <ImageView
+                style="@style/viewParent"
+                android:src="@drawable/baseline_keyboard_arrow_right_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/arrow_right"/>
+
+        </RelativeLayout>
+
         <!-- Dark Mode Toggle -->
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/darkModeSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark Mode"
+            style="@style/settingsText"
+            android:text="@string/dark_mode"
+            android:drawableStart="@drawable/ic_dark_mode"
             android:textSize="16sp"
-            android:padding="12dp" />
+            android:padding="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"/>
 
         <!-- Open Website -->
         <Button
             android:id="@+id/openWebsiteBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Visit UCC Website"
+            android:text="@string/visit_website"
             android:drawableStart="@android:drawable/ic_menu_view"
             android:drawablePadding="8dp"
             android:backgroundTint="@color/purple_500"
@@ -38,7 +88,7 @@
             android:id="@+id/viewMapBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Campus on Map"
+            android:text="@string/view_campus_on_map"
             android:drawableStart="@android:drawable/ic_menu_mapmode"
             android:drawablePadding="8dp"
             android:backgroundTint="@color/teal_700"
@@ -50,7 +100,7 @@
             android:id="@+id/aboutBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About This App"
+            android:text="@string/about_this_app"
             android:drawableStart="@android:drawable/ic_menu_info_details"
             android:drawablePadding="8dp"
             android:layout_marginTop="12dp" />

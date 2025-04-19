@@ -27,7 +27,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:src="@drawable/globe_line"
-            android:contentDescription="Course image" />
+            android:contentDescription="@string/course_icon" />
 
         <!-- Text content -->
         <LinearLayout
@@ -40,7 +40,7 @@
                 android:id="@+id/detailCourseNameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mobile App Development"
+                android:text=""
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -57,7 +57,7 @@
                     android:id="@+id/detailCourseCodeTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="IT401"
+                    android:text=""
                     android:textColor="#666666"
                     android:textSize="14sp" />
 
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="|"
+                    android:text="@string/divider"
                     android:textSize="22sp"
                     android:textColor="#666666" />
 
@@ -74,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="3 Credits"
+                    android:text=""
                     android:textColor="#666666"
                     android:textSize="14sp" />
 
@@ -98,7 +98,7 @@
                     android:id="@+id/detailCoursePreRequisiteHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Prerequisites:"
+                    android:text="@string/prerequisites_header"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:text="IT201, IT301"
+                    android:text=""
                     android:textColor="#0D47A1"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +127,7 @@
                     android:layout_height="50dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/globe_line"
-                    android:contentDescription="Course image"
+                    android:contentDescription="@string/course_icon"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -137,13 +137,15 @@
 
             <Button
                 android:id="@+id/detailCourseCloseButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Close"
                 android:backgroundTint="#00796B"
                 android:textColor="@android:color/white"
+                android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:drawableEnd="@android:drawable/ic_menu_close_clear_cancel"
+                android:paddingStart="1dp"
+                android:paddingEnd="31dp"
                 android:drawablePadding="8dp" />
         </LinearLayout>
     </LinearLayout>

@@ -233,7 +233,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="12dp">
+                        android:padding="12dp"
+                        tools:ignore="UseCompoundDrawables">
 
                         <TextView
                             app:layout_constraintTop_toBottomOf="@+id/admissionsFragRequirementsForInternationaltextView"
@@ -281,7 +282,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/admissionsFragVisitWebsiteIcon"

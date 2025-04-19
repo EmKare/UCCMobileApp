@@ -21,10 +21,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var handler : Handler
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -33,14 +30,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val imageList = listOf(
-            R.drawable.winston_headshot,
-            R.drawable.karen_headshot,
-            R.drawable.damien_headshot,
-            R.drawable.alicia_headshot,
-            R.drawable.nia_headshot,
-            R.drawable.michael_headshot,
-            R.drawable.rajiv_headshot,
-            R.drawable.theodore_headshot,
+            R.drawable.ucc_location,
+            R.drawable.register_now,
+            R.drawable.graduation,
+            R.drawable.ucc_slb_banner,
+            R.drawable.scholarship,
+            R.drawable.invigilator_needed,
         )
 
         val galleryAdapter = ImageGalleryAdapter(imageList)
@@ -57,7 +52,7 @@ class HomeFragment : Fragment() {
 
         binding.imageSlider.offscreenPageLimit = 1
 
-        binding.homeUCCMappreview.setOnClickListener {
+        binding.homeUCCMapPreview.setOnClickListener {
             val mapUri = Uri.parse("geo:0,0?q=University of the Commonwealth Caribbean, Kingston")
             val mapIntent = Intent(Intent.ACTION_VIEW, mapUri).apply {
                 setPackage("com.google.android.apps.maps")
