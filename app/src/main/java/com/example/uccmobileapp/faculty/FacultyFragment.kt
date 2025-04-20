@@ -77,7 +77,7 @@ class FacultyFragment(private val facultyMembers : List<FacultyMember>) : Fragme
                 if (position == facultyMembers.size - 1) {
                     handler.postDelayed({
                         binding.facultyViewPager.setCurrentItem(0, false)
-                    }, 1000)
+                    }, 5000)
                 }
             }
         })
