@@ -1,4 +1,5 @@
 Final Project- ITT420
+
 App name: CampusPulse
 
 Kareem Saunders
