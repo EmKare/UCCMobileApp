@@ -13,11 +13,11 @@ import com.example.uccmobileapp.misc.URLs
 import com.example.uccmobileapp.databinding.FragmentAboutUccBinding
 
 class AboutUccFragment : Fragment() {
-    //create binding for About UCC Fragment
+    //Create binding for About UCC Fragment
     private var _binding: FragmentAboutUccBinding? = null
     private val binding get() = _binding!!
-    //create varible with youtube video data (copied from the youtube video's share option)
-    //video url extracted and added to URLs object
+    //Creates a variable with youtube video data (copied from the youtube video's share option)
+    //Video url extracted and added to URLs object
     private val youtubeEmbed = """
         <html>
         <body style="margin:0;padding:0;">
@@ -31,15 +31,16 @@ class AboutUccFragment : Fragment() {
         </html>
     """.trimIndent()
 
+    //Inflates the layout for this fragment using ViewBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAboutUccBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    @SuppressLint("SetJavaScriptEnabled")
+    @SuppressLint("SetJavaScriptEnabled") //Suppresses lint warning for enabling JavaScript
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //assigns different settings for the WebView
+        //Assigns different settings for the WebView
         val webView: WebView = binding.uccVideoWebView
         webView.settings.javaScriptEnabled = true
         webView.settings.loadWithOverviewMode = true
@@ -47,10 +48,11 @@ class AboutUccFragment : Fragment() {
         webView.settings.cacheMode = WebSettings.LOAD_DEFAULT
         webView.settings.domStorageEnabled = true
         webView.webViewClient = WebViewClient()
-        //loads the youtube data into the WebView element
+        //Loads the youtube data into the WebView element
         webView.loadData(youtubeEmbed, "text/html", "utf-8")
     }
 
+    //Clean up binding reference to prevent memory leaks
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

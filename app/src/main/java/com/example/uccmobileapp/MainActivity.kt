@@ -1,5 +1,6 @@
 package com.example.uccmobileapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -19,102 +20,99 @@ import com.example.uccmobileapp.home.HomeFragment
 import com.example.uccmobileapp.settings.SettingsFragment
 import com.example.uccmobileapp.socialmedia.SocialMediaFragment
 
-class MainActivity : AppCompatActivity() ,FabVisibilityListener {
+//MainActivity hosts the navigation drawer, handles fragment transactions,
+//initializes local databases for courses and faculty, and controls the email FAB.
+class MainActivity : AppCompatActivity(), FabVisibilityListener {
 
-    private lateinit var binding : ActivityMainBinding
+    // ViewBinding for accessing views in activity_main.xml
+    private lateinit var binding: ActivityMainBinding
 
-    private lateinit var coursesDBHelper : CoursesDatabaseHelper
-    private lateinit var facultyDBHelper : FacultyMembersDatabaseHelper
+    // Helpers for accessing SQLite databases for courses and faculty
+    private lateinit var coursesDBHelper: CoursesDatabaseHelper
+    private lateinit var facultyDBHelper: FacultyMembersDatabaseHelper
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
+        // Inflate the layout via ViewBinding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Display app version in the footer TextView
         val versionText = findViewById<TextView>(R.id.appVersion)
         val versionName = packageManager.getPackageInfo(packageName, 0).versionName
         versionText.text = "Version $versionName"
 
-        coursesDBHelper = CoursesDatabaseHelper(binding.root.context)
-
+        // Initialize and populate the courses database if empty
+        coursesDBHelper = CoursesDatabaseHelper(this)
         if (coursesDBHelper.isCoursesTableEmpty()) {
             for (course in ITCourses) {
                 coursesDBHelper.insertCourse(course)
             }
         }
-
         val courses = coursesDBHelper.getAllCourses()
 
-        facultyDBHelper = FacultyMembersDatabaseHelper(binding.root.context)
-
+        // Initialize and populate the faculty database if empty
+        facultyDBHelper = FacultyMembersDatabaseHelper(this)
         if (facultyDBHelper.isFacultyTableEmpty()) {
-            for (facultyMember in FacultyMembers) {
-                facultyDBHelper.insertFacultyMembers(facultyMember)
+            for (member in FacultyMembers) {
+                facultyDBHelper.insertFacultyMembers(member)
             }
         }
-
         val facultyMembers = facultyDBHelper.getAllFacultyMembers()
 
+        // Open navigation drawer when menu button is clicked
         binding.menuButton.setOnClickListener {
             binding.drawerLayout.open()
         }
 
-        binding.emailFab.setOnClickListener{
+        // Send email to HOD when FAB is clicked, and close drawer
+        binding.emailFab.setOnClickListener {
             binding.drawerLayout.close()
             sendEmailToHOD()
-            //goToFragment(EmailFragment())
-            //EmailHelper.sendEmail(this, "hod@ucc.edu", "Inquiry from App", "Hello, I’d like to ask about...",)
         }
 
-        binding.navigationView.setNavigationItemSelectedListener {
-            when ( it.itemId )
-            {
-                R.id.nav_home ->
-                {
-                    showFab()
-                    goToFragment(HomeFragment())
+        // Handle navigation drawer menu item selections
+        binding.navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    showFab()                                  // Show FAB on home screen
+                    goToFragment(HomeFragment())               // Load HomeFragment
                     binding.drawerLayout.close()
                     true
                 }
-                R.id.nav_directory ->
-                {
-                    hideFab()
-                    binding.drawerLayout.close()
+                R.id.nav_directory -> {
+                    hideFab()                                  // Hide FAB on directory
                     goToFragment(FacultyFragment(facultyMembers))
+                    binding.drawerLayout.close()
                     true
                 }
-                R.id.nav_courses ->
-                {
-                    showFab()
+                R.id.nav_courses -> {
+                    showFab()                                  // Show FAB on courses list
                     goToFragment(CoursesFragment(courses))
                     binding.drawerLayout.close()
                     true
                 }
-                R.id.nav_admissions ->
-                {
-                    showFab()
+                R.id.nav_admissions -> {
+                    showFab()                                  // Show FAB on admissions page
                     goToFragment(AdmissionsFragment())
                     binding.drawerLayout.close()
                     true
                 }
-                R.id.nav_social ->
-                {
-                    hideFab()
+                R.id.nav_social -> {
+                    hideFab()                                  // Hide FAB on social media viewer
                     goToFragment(SocialMediaFragment())
                     binding.drawerLayout.close()
                     true
                 }
-                R.id.nav_settings ->
-                {
-                    showFab()
+                R.id.nav_settings -> {
+                    showFab()                                  // Show FAB on settings page
                     goToFragment(SettingsFragment())
                     binding.drawerLayout.close()
                     true
                 }
-                R.id.nav_about_ucc ->
-                {
-                    showFab()
+                R.id.nav_about_ucc -> {
+                    showFab()                                  // Show FAB on about page
                     goToFragment(AboutUccFragment())
                     binding.drawerLayout.close()
                     true
@@ -122,35 +120,39 @@ class MainActivity : AppCompatActivity() ,FabVisibilityListener {
                 else -> false
             }
         }
+
+        // On first launch, load HomeFragment and mark it selected
         if (savedInstanceState == null) {
             goToFragment(HomeFragment())
             binding.navigationView.setCheckedItem(R.id.nav_home)
         }
-
-        //layoutInflater.inflate(R.layout.nav_footer, binding.navigationView, true)
-        //binding.navigationView.addView(footerView)
-
-
-
-
     }
 
-    private fun goToFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment).addToBackStack(null).commit()
+    //Replace the fragment in the container and add transaction to back stack.
+    private fun goToFragment(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
+    //Launches an email intent to contact the HOD.
     private fun sendEmailToHOD() {
         val intent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:ithod@ucc.edu.jm")
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Department Inquiry")
+            // Note: EXTRA_SUBJECT should be set on this Intent object, not on 'intent' property
+            putExtra(Intent.EXTRA_SUBJECT, "Department Inquiry")
         }
         startActivity(Intent.createChooser(intent, "Send Email"))
     }
 
+    //Show the email FAB (implements FabVisibilityListener).
     override fun showFab() {
         binding.emailFab.show()
     }
 
+    //Hide the email FAB (implements FabVisibilityListener).
     override fun hideFab() {
         binding.emailFab.hide()
     }

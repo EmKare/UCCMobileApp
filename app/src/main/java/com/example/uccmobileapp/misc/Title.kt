@@ -1,13 +1,13 @@
 package com.example.uccmobileapp.misc
 
-//enum class of Titles
-//used for FacultyMember objects
+// Enumeration of titles used for FacultyMember objects
 enum class Title(private val displayName: String) {
-    MR("Mr"),
-    MISS("Miss"),
-    MRS("Mrs"),
-    DR("Dr"),
-    PROF("Prof");
+    MR("Mr"),    // Mister
+    MISS("Miss"),// Miss
+    MRS("Mrs"),  // Misses
+    DR("Dr"),    // Doctor
+    PROF("Prof");// Professor
 
+    // Override toString to return the human-readable display name
     override fun toString(): String = displayName
 }

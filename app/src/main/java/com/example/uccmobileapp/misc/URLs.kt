@@ -1,6 +1,6 @@
 package com.example.uccmobileapp.misc
 
-//object with all the urls used throughout the project
+//Object with all the urls used throughout the project
 object URLs {
 
     //International Requirements
